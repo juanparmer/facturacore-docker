@@ -216,3 +216,6 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Certbot / Let's Encrypt certificados locales y desafíos
+certbot/
