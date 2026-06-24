@@ -22,6 +22,9 @@ services:
       - USER=odoo
       - PASSWORD=odoo
     command: odoo --proxy-mode
+    networks:
+      - default
+      - api_backend
 
   nginx:
     image: nginx:1.25-alpine
@@ -48,3 +51,7 @@ services:
 volumes:
   odoo-db-data:
   odoo-web-data:
+
+networks:
+  api_backend:
+    external: true
